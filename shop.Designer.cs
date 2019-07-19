@@ -1,6 +1,6 @@
 ﻿namespace shop
 {
-    partial class Form1
+    partial class shop
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(235, 192);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "shop";
+            this.Text = "shop keeper";
+            this.Load += new System.EventHandler(this.Shop_Load);
             this.ResumeLayout(false);
 
         }

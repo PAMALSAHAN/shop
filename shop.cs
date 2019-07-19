@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace shop
 {
-    public partial class Form1 : Form
+    public partial class shop : Form
     {
-        public Form1()
+        public shop()
         {
             InitializeComponent();
+        }
+
+        private void Shop_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
