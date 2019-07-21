@@ -31,6 +31,10 @@
             this.headerText = new System.Windows.Forms.Label();
             this.storeItemList = new System.Windows.Forms.Label();
             this.ItemList = new System.Windows.Forms.ListBox();
+            this.addToCart = new System.Windows.Forms.Button();
+            this.shoppingListBox = new System.Windows.Forms.ListBox();
+            this.storeItem = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // headerText
@@ -48,7 +52,7 @@
             // 
             this.storeItemList.AutoSize = true;
             this.storeItemList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.storeItemList.Location = new System.Drawing.Point(12, 55);
+            this.storeItemList.Location = new System.Drawing.Point(23, 54);
             this.storeItemList.Name = "storeItemList";
             this.storeItemList.Size = new System.Drawing.Size(86, 24);
             this.storeItemList.TabIndex = 1;
@@ -58,16 +62,58 @@
             // ItemList
             // 
             this.ItemList.FormattingEnabled = true;
-            this.ItemList.Location = new System.Drawing.Point(20, 85);
+            this.ItemList.Location = new System.Drawing.Point(27, 81);
             this.ItemList.Name = "ItemList";
-            this.ItemList.Size = new System.Drawing.Size(165, 160);
+            this.ItemList.Size = new System.Drawing.Size(219, 212);
             this.ItemList.TabIndex = 2;
+            // 
+            // addToCart
+            // 
+            this.addToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToCart.Location = new System.Drawing.Point(263, 147);
+            this.addToCart.Name = "addToCart";
+            this.addToCart.Size = new System.Drawing.Size(134, 39);
+            this.addToCart.TabIndex = 3;
+            this.addToCart.Text = "Add to Cart ->";
+            this.addToCart.UseVisualStyleBackColor = true;
+            // 
+            // shoppingListBox
+            // 
+            this.shoppingListBox.FormattingEnabled = true;
+            this.shoppingListBox.Location = new System.Drawing.Point(413, 81);
+            this.shoppingListBox.Name = "shoppingListBox";
+            this.shoppingListBox.Size = new System.Drawing.Size(219, 212);
+            this.shoppingListBox.TabIndex = 5;
+            // 
+            // storeItem
+            // 
+            this.storeItem.AutoSize = true;
+            this.storeItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storeItem.Location = new System.Drawing.Point(409, 54);
+            this.storeItem.Name = "storeItem";
+            this.storeItem.Size = new System.Drawing.Size(103, 24);
+            this.storeItem.TabIndex = 4;
+            this.storeItem.Text = "Store Items";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(498, 303);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(134, 39);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Purchase";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 290);
+            this.ClientSize = new System.Drawing.Size(660, 509);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.shoppingListBox);
+            this.Controls.Add(this.storeItem);
+            this.Controls.Add(this.addToCart);
             this.Controls.Add(this.ItemList);
             this.Controls.Add(this.storeItemList);
             this.Controls.Add(this.headerText);
@@ -86,6 +132,10 @@
         private System.Windows.Forms.Label headerText;
         private System.Windows.Forms.Label storeItemList;
         private System.Windows.Forms.ListBox ItemList;
+        private System.Windows.Forms.Button addToCart;
+        private System.Windows.Forms.ListBox shoppingListBox;
+        private System.Windows.Forms.Label storeItem;
+        private System.Windows.Forms.Button button1;
     }
 }
 
