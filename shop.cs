@@ -12,6 +12,7 @@ namespace shop
 {
     public partial class shop : Form
     {
+        private store store = new store();
         public shop()
         {
             InitializeComponent();
