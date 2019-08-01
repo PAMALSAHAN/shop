@@ -13,7 +13,8 @@ namespace shop
 {
     public partial class shop : Form
     {
-        private store store = new store(); 
+        private store store = new store();
+        BindingSource itemBinding = new BindingSource();
         /// <summary>
         /// this will give error mesage we want to arrange that 
         /// shop library function have to use for this
@@ -23,6 +24,7 @@ namespace shop
             InitializeComponent();
             // this is the constructor of the shop all the thing should code bellow this
             SetupData();
+            //filling data using this setupData();
 
         }
 
@@ -58,11 +60,33 @@ namespace shop
             store.Vendors.Add(new vendor { firstName = "asiri", lastName = "senith" });
             // commission is .5 common to all objects so we can make a constructor for vendor  
 
+            store.Items.Add(new Item
+                        {   title = "linera algebra",
+                            description = "this is about liner algebra",
+                            price = 150.23M,
+                            owner = store.Vendors[0]
+                        });
+            // we should write M when we using the decimal 
+            store.Items.Add(new Item
+                            {  title = "linera algebra",
+                               description = "this is about liner algebra",
+                               price = 150.23M,
+                               owner = store.Vendors[1]
+                            });
+
+            store.Items.Add(new Item
+                                {
+                                    title = "Harry Potter",
+                                    description = "this is about misterious book",
+                                    price = 150.23M,
+                                    owner = store.Vendors[0]
+                                });
 
 
 
-
+            store.Name = "second are better";
         }
+
 
 
     }
