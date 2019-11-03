@@ -16,7 +16,9 @@ namespace shop
         private store store = new store();
         BindingSource itemBinding = new BindingSource();
         /// <summary>
-        /// this will give error mesage we want to arrange that 
+        /// this will give error mesage we want to arr
+       
+        /// ange that 
         /// shop library function have to use for this
         /// </summary>
         public shop()
