@@ -70,8 +70,8 @@ namespace shop
                         });
             // we should write M when we using the decimal 
             store.Items.Add(new Item
-                            {  title = "linera algebra",
-                               description = "this is about liner algebra",
+                            {  title = "trignometry",
+                               description = "this is is about trignometry ",
                                price = 150.23M,
                                owner = store.Vendors[1]
                             });
