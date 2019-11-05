@@ -36,6 +36,7 @@
             this.storeItem = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // headerText
@@ -67,6 +68,7 @@
             this.ItemList.Name = "ItemList";
             this.ItemList.Size = new System.Drawing.Size(219, 212);
             this.ItemList.TabIndex = 2;
+            this.ItemList.SelectedIndexChanged += new System.EventHandler(this.ItemList_SelectedIndexChanged);
             // 
             // addToCart
             // 
@@ -77,6 +79,7 @@
             this.addToCart.TabIndex = 3;
             this.addToCart.Text = "Add to Cart ->";
             this.addToCart.UseVisualStyleBackColor = true;
+            this.addToCart.Click += new System.EventHandler(this.AddToCart_Click);
             // 
             // shoppingListBox
             // 
@@ -115,11 +118,23 @@
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // Delete
+            // 
+            this.Delete.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(338, 303);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(136, 39);
+            this.Delete.TabIndex = 8;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 509);
+            this.Controls.Add(this.Delete);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.shoppingListBox);
@@ -148,6 +163,7 @@
         private System.Windows.Forms.Label storeItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Delete;
     }
 }
 
