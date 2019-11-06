@@ -31,9 +31,11 @@ namespace shop
             //filling data using this setupData();
 
             //elagata karanne bind karana eka data.
-            BindingSource db = new BindingSource();
-            db.DataSource = store.Items;
-            ItemList.DataSource = db;   //mehana itemlist kiyanne shop.cs eke design eke text box eke name
+
+            itemBinding.DataSource = store.Items.Where(x => x.sold == false).ToList() ; // meka mulin fill wenna witharai one x thina tika wadak na kokatath dala tina eka
+            //hodai.mekema copy ekak puchase click function eke hadanna one ethanin thamai x.sold true wenne .ita passe ai nawatha data bind karanna one.ehema naththam
+            //item list eken yanne naha
+            ItemList.DataSource = itemBinding;   //mehana itemlist kiyanne shop.cs eke design eke text box eke name
 
             ItemList.DisplayMember = "Display";
             ItemList.ValueMember = "Display";
@@ -138,6 +140,21 @@ namespace shop
             Item deleteItem = (Item)shoppingListBox.SelectedItem;
             shoppingCartList.Remove(deleteItem);
             shoppingBinding.ResetBindings(true); //value eka vitharai change wenne
+        }
+
+        private void Purchase_Click(object sender, EventArgs e)
+        {
+            // click karama shopping cart eka clear wenna one 
+            // item.sold kiyana eka true wenna one 
+            foreach(Item i in shoppingCartList)
+            {
+                i.sold = true; //sold item siyalla true kara
+
+            }
+            itemBinding.DataSource = store.Items.Where(x => x.sold == false).ToList();
+            shoppingCartList.Clear();
+            shoppingBinding.ResetBindings(false);
+            itemBinding.ResetBindings(false);
         }
     }
 }

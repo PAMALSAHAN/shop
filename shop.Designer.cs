@@ -34,9 +34,9 @@
             this.addToCart = new System.Windows.Forms.Button();
             this.shoppingListBox = new System.Windows.Forms.ListBox();
             this.storeItem = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.purchase = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
+            this.vendorList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // headerText
@@ -66,7 +66,7 @@
             this.ItemList.FormattingEnabled = true;
             this.ItemList.Location = new System.Drawing.Point(27, 81);
             this.ItemList.Name = "ItemList";
-            this.ItemList.Size = new System.Drawing.Size(219, 212);
+            this.ItemList.Size = new System.Drawing.Size(211, 160);
             this.ItemList.TabIndex = 2;
             this.ItemList.SelectedIndexChanged += new System.EventHandler(this.ItemList_SelectedIndexChanged);
             // 
@@ -86,7 +86,7 @@
             this.shoppingListBox.FormattingEnabled = true;
             this.shoppingListBox.Location = new System.Drawing.Point(413, 81);
             this.shoppingListBox.Name = "shoppingListBox";
-            this.shoppingListBox.Size = new System.Drawing.Size(219, 212);
+            this.shoppingListBox.Size = new System.Drawing.Size(219, 160);
             this.shoppingListBox.TabIndex = 5;
             // 
             // storeItem
@@ -99,44 +99,44 @@
             this.storeItem.TabIndex = 4;
             this.storeItem.Text = "Store Items";
             // 
-            // button1
+            // purchase
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(498, 303);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 39);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Purchase";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 397);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(212, 33);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.purchase.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchase.Location = new System.Drawing.Point(514, 247);
+            this.purchase.Name = "purchase";
+            this.purchase.Size = new System.Drawing.Size(118, 39);
+            this.purchase.TabIndex = 6;
+            this.purchase.Text = "Purchase";
+            this.purchase.UseVisualStyleBackColor = true;
+            this.purchase.Click += new System.EventHandler(this.Purchase_Click);
             // 
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(338, 303);
+            this.Delete.Location = new System.Drawing.Point(413, 247);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(136, 39);
+            this.Delete.Size = new System.Drawing.Size(95, 39);
             this.Delete.TabIndex = 8;
             this.Delete.Text = "Delete";
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // vendorList
+            // 
+            this.vendorList.FormattingEnabled = true;
+            this.vendorList.Location = new System.Drawing.Point(27, 337);
+            this.vendorList.Name = "vendorList";
+            this.vendorList.Size = new System.Drawing.Size(211, 160);
+            this.vendorList.TabIndex = 9;
             // 
             // shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 509);
+            this.Controls.Add(this.vendorList);
             this.Controls.Add(this.Delete);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.purchase);
             this.Controls.Add(this.shoppingListBox);
             this.Controls.Add(this.storeItem);
             this.Controls.Add(this.addToCart);
@@ -161,9 +161,9 @@
         private System.Windows.Forms.Button addToCart;
         private System.Windows.Forms.ListBox shoppingListBox;
         private System.Windows.Forms.Label storeItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button purchase;
         private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.ListBox vendorList;
     }
 }
 
