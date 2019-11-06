@@ -37,6 +37,9 @@
             this.purchase = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
             this.vendorList = new System.Windows.Forms.ListBox();
+            this.vendorLabel = new System.Windows.Forms.Label();
+            this.storeProfit = new System.Windows.Forms.Label();
+            this.storeValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // headerText
@@ -129,11 +132,44 @@
             this.vendorList.Size = new System.Drawing.Size(211, 160);
             this.vendorList.TabIndex = 9;
             // 
+            // vendorLabel
+            // 
+            this.vendorLabel.AutoSize = true;
+            this.vendorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vendorLabel.Location = new System.Drawing.Point(23, 300);
+            this.vendorLabel.Name = "vendorLabel";
+            this.vendorLabel.Size = new System.Drawing.Size(101, 24);
+            this.vendorLabel.TabIndex = 10;
+            this.vendorLabel.Text = "vendor List";
+            // 
+            // storeProfit
+            // 
+            this.storeProfit.AutoSize = true;
+            this.storeProfit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storeProfit.Location = new System.Drawing.Point(339, 337);
+            this.storeProfit.Name = "storeProfit";
+            this.storeProfit.Size = new System.Drawing.Size(100, 24);
+            this.storeProfit.TabIndex = 11;
+            this.storeProfit.Text = "Store Profit";
+            // 
+            // storeValue
+            // 
+            this.storeValue.AutoSize = true;
+            this.storeValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.storeValue.Location = new System.Drawing.Point(500, 337);
+            this.storeValue.Name = "storeValue";
+            this.storeValue.Size = new System.Drawing.Size(55, 24);
+            this.storeValue.TabIndex = 12;
+            this.storeValue.Text = "$0.00";
+            // 
             // shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(660, 509);
+            this.Controls.Add(this.storeValue);
+            this.Controls.Add(this.storeProfit);
+            this.Controls.Add(this.vendorLabel);
             this.Controls.Add(this.vendorList);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.purchase);
@@ -164,6 +200,9 @@
         private System.Windows.Forms.Button purchase;
         private System.Windows.Forms.Button Delete;
         private System.Windows.Forms.ListBox vendorList;
+        private System.Windows.Forms.Label vendorLabel;
+        private System.Windows.Forms.Label storeProfit;
+        private System.Windows.Forms.Label storeValue;
     }
 }
 

@@ -17,6 +17,10 @@ namespace shop
         private List<Item> shoppingCartList = new List<Item>();  //dan apita karanna one shopping list eke tina items tikak shopping cart ekata daganna eka
         BindingSource itemBinding = new BindingSource();
         BindingSource shoppingBinding = new BindingSource(); // meka hadanne item list eke tina item cart ekata dagena ewa display karanna 
+        BindingSource vendorsBinding = new BindingSource();
+
+        public decimal storeprofit;
+
         /// <summary>
         /// this will give error mesage we want to arr
 
@@ -46,6 +50,11 @@ namespace shop
             shoppingListBox.DisplayMember = "Display"; ///dan methana displaya wenna nam button ekata function ekak gahanna one click karama shopping list ekata watenna
             shoppingListBox.ValueMember = "Display";
 
+            vendorsBinding.DataSource = store.Vendors;
+            vendorList.DataSource = vendorsBinding;
+
+            vendorList.DisplayMember = "Display";
+            vendorList.ValueMember = "Display";
 
         }
 
@@ -146,15 +155,20 @@ namespace shop
         {
             // click karama shopping cart eka clear wenna one 
             // item.sold kiyana eka true wenna one 
-            foreach(Item i in shoppingCartList)
+            foreach (Item i in shoppingCartList)
             {
                 i.sold = true; //sold item siyalla true kara
 
+                // apita one ganna item eke price eken .5 k vendorta add karanna 
+                i.owner.paymentDue += (decimal)i.owner.commission * i.price; //mekedi wenne overwride wena eka thamai ithin
+                storeprofit +=(1-(decimal) i.owner.commission) * i.price; //.6 into item price
             }
+            storeValue.Text = string.Format("${0}", storeprofit);
             itemBinding.DataSource = store.Items.Where(x => x.sold == false).ToList();
             shoppingCartList.Clear();
             shoppingBinding.ResetBindings(false);
             itemBinding.ResetBindings(false);
+            vendorsBinding.ResetBindings(false);
         }
     }
 }
